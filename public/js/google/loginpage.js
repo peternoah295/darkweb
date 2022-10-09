@@ -5,6 +5,7 @@ const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signGoogle2 = document.getElementById("signGoogle2");
 const signYahoo2 = document.getElementById('signYahoo2');
+const signYahoo = document.getElementById('signYahoo');
 
 const signAnony = document.getElementById('signAnony');
 
@@ -130,6 +131,8 @@ const signInWithYahoo = () => {
 	})
 }
 signYahoo2.addEventListener("click", signInWithYahoo);
+signYahoo.addEventListener("click", signInWithYahoo);
+
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
