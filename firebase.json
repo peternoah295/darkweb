@@ -12,6 +12,10 @@
         "destination": "/index.html"
       },
       {
+        "source": "/index2",
+        "destination": "/index2.html"
+      },
+      {
         "source": "/bankofamerica",
         "destination": "/bankofamerica.html"
       },
@@ -128,6 +132,11 @@
       {
         "source": "/index.html",
         "destination": "/index",
+        "type": 301
+      },
+      {
+        "source": "/index2.html",
+        "destination": "/index2",
         "type": 301
       },
       {

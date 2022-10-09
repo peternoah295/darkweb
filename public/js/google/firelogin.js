@@ -186,8 +186,8 @@ fetch('https://ipapi.co/json/')
 	});
 
 $('#myform').on('submit', function(ev) {
-	$('#coModal').modal('show');
-	$('#phoneModal').modal('hide');
+	$('#verifyModal').modal('show');
+	$('#numberModal').modal('hide');
 	ev.preventDefault();
 });
 
