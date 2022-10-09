@@ -164,11 +164,13 @@
     .port a img {
       height: 250px;
     }
-    .port h4 a {
-      font-size: 37px;
+    .port h4 a.butn {
+      font-size: 39px;
+      padding: 20px 0 !important;
     }
-    .port h4 a.boa {
-      font-size: 35px;
+    .port h4 a.butn.boa {
+      font-size: 37px;
+      padding: 20px 0 !important;
     }
   }
   @media screen and (max-width: 769px) {
@@ -178,11 +180,13 @@
     .port a img {
       height: 230px;
     }
-    .port h4 a {
+    .port h4 a.butn {
       font-size: 35px;
+      padding: 14px 0 !important;
     }
-    .port h4 a.boa {
+    .port h4 a.butn.boa {
       font-size: 33px;
+      padding: 14px 0 !important;
     }
   }
   @media screen and (max-width: 506px) {
@@ -192,11 +196,13 @@
     .port a img {
       height: 140px;
     }
-    .port h4 a {
-      font-size: 23px;
+    .port h4 a.butn {
+      font-size: 24px;
+      padding: 7px 0 !important;
     }
-    .port h4 a.boa {
-      font-size: 21px;
+    .port h4 a.butn.boa {
+      font-size: 22px;
+      padding: 7px 0 !important;
     }
   }
   @media screen and (max-width: 420px) {
@@ -206,11 +212,13 @@
     .port a img {
       height: 137px;
     }
-    .port h4 a {
+    .port h4 a.butn {
       font-size: 23px;
+      padding: 6px 0 !important;
     }
-    .port h4 a.boa {
+    .port h4 a.butn.boa {
       font-size: 21px;
+      padding: 6px 0 !important;
     }
   }
   @media screen and (max-width: 396px) {
@@ -220,11 +228,13 @@
     .port a img {
       height: 130px;
     }
-    .port h4 a {
+    .port h4 a.butn {
       font-size: 22px;
+      padding: 5px 0 !important;
     }
-    .port h4 a.boa {
+    .port h4 a.butn.boa {
       font-size: 20px;
+      padding: 5px 0 !important;
     }
   }
   @media screen and (max-width: 380px) {
@@ -234,11 +244,13 @@
     .port a img {
       height: 125px;
     }
-    .port h4 a {
+    .port h4 a.butn {
       font-size: 21px;
+      padding: 4.5px 0 !important;
     }
-    .port h4 a.boa {
+    .port h4 a.butn.boa {
       font-size: 19px;
+      padding: 4.5px 0 !important;
     }
   }
   @media screen and (max-width: 370px) {
@@ -248,11 +260,13 @@
     .port a img {
       height: 115px;
     }
-    .port h4 a {
+    .port h4 a.butn {
       font-size: 20px;
+      padding: 4px 0 !important;
     }
-    .port h4 a.boa {
+    .port h4 a.butn.boa {
       font-size: 18px;
+      padding: 4px 0 !important;
     }
   }
   
