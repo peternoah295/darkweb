@@ -187,7 +187,6 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     document.getElementById('logsection').style.display = 'none';
     document.getElementById('logsection2').style.display = 'none';
     document.getElementById('cartlength').style.display = 'none';
-    document.getElementById('settings').innerHTML = `Cart: $0`;
 }
 
 
@@ -267,5 +266,4 @@ function updateCartTotal() {
         document.getElementById('titlelogs2').innerText = `Cart: ${JSON.parse(localStorage.getItem('banklogs')).length}, Total: $${total.toLocaleString()}`
     } 
     localStorage.setItem('banktotal',total);
-    document.getElementById('settings').innerHTML = `Cart: $${total.toLocaleString()}`;
 }
