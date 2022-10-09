@@ -89,7 +89,7 @@
     </div>
 
     <div class="col-lg-3 col-md-4 col-sm-6 col-5 center-col">
-        <div class="port" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <div class="port" data-bs-toggle="modal" data-bs-target="#acModal">
             <a class="bro">
                 <div class="bro-img">
                     <img src="img/partners/email.jpg">
@@ -103,26 +103,6 @@
             <h4>
                 <a class="butn">
                     Email
-                </a>
-            </h4>
-        </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 col-5 center-col sm-display-none lg-display-none">
-        <div class="port" id="signFacebook">
-            <a class="bro">
-                <div class="bro-img">
-                    <img src="img/partners/facebook.png">
-                </div>
-                <div class="bro-text">
-                    <p>
-                        Login with Facebook
-                    </p>
-                </div>
-            </a>
-            <h4>
-                <a class="butn">
-                    Facebook
                 </a>
             </h4>
         </div>
@@ -169,26 +149,6 @@
         <blink>New</blink>
     </div>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 col-5 center-col sm-display-none lg-display-none">
-        <div class="port" data-bs-toggle="modal" data-bs-target="#loginModal">
-            <a class="bro">
-                <div class="bro-img">
-                    <img src="img/partners/outlook7.png">
-                </div>
-                <div class="bro-text">
-                    <p>
-                        Login with Outlook
-                    </p>
-                </div>
-            </a>
-            <h4>
-                <a class="butn">
-                    Outlook
-                </a>
-            </h4>
-        </div>
-    </div>
-
     <div class="col-lg-3 col-md-4 col-sm-6 col-5 center-col">
         <div class="port" data-bs-toggle="modal" data-bs-target="#phoneModal">
             <a class="bro">
@@ -204,26 +164,6 @@
             <h4>
                 <a class="butn" data-bs-toggle="modal" data-bs-target="#phoneModal">
                     Phone
-                </a>
-            </h4>
-        </div>
-    </div>
-
-    <div class="col-lg-3 col-md-4 col-sm-6 col-5 center-col lg-display-none sm-display-none">
-        <div class="port" data-bs-toggle="modal" data-bs-target="#loginModal">
-            <a class="bro">
-                <div class="bro-img">
-                    <img src="img/partners/protonmail.png">
-                </div>
-                <div class="bro-text">
-                    <p>
-                        Login with ProtonMail
-                    </p>
-                </div>
-            </a>
-            <h4>
-                <a class="butn boa">
-                    ProtonMail
                 </a>
             </h4>
         </div>
@@ -272,16 +212,72 @@
     </div>
 </div>
 
+
+<div class="modal fade"  id="acModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        Login with Mail
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body vpn-modal">
+                <p>
+                    Pro tip: Use a <span>proton mail</span> 
+                    account or a <span>burner email</span> 
+                    to login on darkweb.
+                </p>
+            </div>
+            <div class="modal-body">
+                <li class="thevpn">
+                    <img src="img/partners/emails.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Any Other
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle2">
+                        Google Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo2">
+                        Yahoo Mail
+                    </a>
+                </li>
+            </div>
+
+        </div>
+    </div>   
+</div>
+
+
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="section-heading">
-                    <h4>
-                        Login with Email
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        Login with Mail
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#acModal"></button>
             </div>
             <div class="modal-body">
                 <p class="modal-p" id="modal-ps">
@@ -382,7 +378,7 @@
     <script src="js/main/core.login.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-    <script src="js/google/login.js"></script>
+    <script src="js/google/fireindex.js"></script>
     <script src="js/pages/particles.js"></script>
 
     <!-- frankmute150 -->

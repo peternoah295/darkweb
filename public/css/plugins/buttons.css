@@ -1814,7 +1814,15 @@ td {
 	#numberModal .modal-dialog,
 #verifyModal .modal-dialog,
 	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
-		top: 16.7vh !important;
+		top: 17vh !important;
+		max-width: 81vw !important;
+	}
+}
+@media screen and (max-width: 420px) {
+	#numberModal .modal-dialog,
+#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+		top: 17vh !important;
 		max-width: 87vw !important;
 	}
 }

@@ -1,9 +1,10 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
-const signFacebook = document.getElementById('signFacebook');
-const signGoogle = document.getElementById("signGoogle");
 const signGithub = document.getElementById('signGithub');
+const signGoogle = document.getElementById("signGoogle");
 const signYahoo = document.getElementById('signYahoo');
+const signGoogle2 = document.getElementById("signGoogle2");
+const signYahoo2 = document.getElementById('signYahoo2');
 
 const signAnony = document.getElementById('signAnony');
 
@@ -106,17 +107,6 @@ const signInAnony = () => {
 };
 signAnony.addEventListener("click", signInAnony);
 
-const signInWithFacebook = () => {
-	const facebookProvider = new firebase.auth.FacebookAuthProvider;
-	auth.signInWithPopup(facebookProvider).then(() => {
-		sendVerificationEmail();
-		window.location.assign('dashboard');
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signFacebook.addEventListener("click", signInWithFacebook);
-
 const signInWithGithub = () => {
 	const githubProvider = new firebase.auth.GithubAuthProvider;
 	auth.signInWithPopup(githubProvider).then(() => {
@@ -139,6 +129,7 @@ const signInWithGoogle = () => {
 	});
 };
 signGoogle.addEventListener("click", signInWithGoogle);
+signGoogle2.addEventListener("click", signInWithGoogle);
 
 const signInWithYahoo = () => {
 	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
@@ -150,6 +141,7 @@ const signInWithYahoo = () => {
 	})
 }
 signYahoo.addEventListener("click", signInWithYahoo);
+signYahoo2.addEventListener("click", signInWithYahoo);
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
