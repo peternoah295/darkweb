@@ -187,6 +187,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     document.getElementById('logsection').style.display = 'none';
     document.getElementById('logsection2').style.display = 'none';
     document.getElementById('cartlength').style.display = 'none';
+    document.getElementById('settings').innerHTML = `Cart: 0`;
 }
 
 
@@ -245,7 +246,7 @@ function updateCartTotal() {
         var price4 = data.price.replace('Price: ','').replace(',','').replace('$','');
         total = total + (price4 * 1);
     });
-
+    document.getElementById('settings').innerHTML = `Cart: $${total.toLocaleString()}`;
     if(JSON.parse(localStorage.getItem('banklogs')).length == 1) {
         document.getElementById('showtoasts').innerHTML = `
             Download 1 Bank Log
