@@ -28,17 +28,11 @@ const labelMail = document.getElementById('label-mail');
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 
-
-const phoneNumberField = document.getElementById('phoneNumber');
-const codeField = document.getElementById('code');
-const signInWithPhoneButton = document.getElementById('signInWithPhone');
-const getCodeButton = document.getElementById('getCode');
+const signGoogle = document.getElementById("signGoogle");
+const signYahoo = document.getElementById('signYahoo');
 
 const vpn = document.getElementById('vpn');
-const protip = document.getElementById('pro-tip');
-
-const emailBtn = document.getElementById('email-btn');
-const phoneBtn = document.getElementById('phone-btn');
+const linkBtn = document.getElementById('settings');
 
 
 if(!window.location.href.includes('arkweb')){
@@ -79,13 +73,7 @@ auth.onAuthStateChanged(user => {
 				<img src="img/partners/google.png">
 			`;
 		}
-		protip.innerHTML = `
-			Banklogs will be sent to your email inbox <span>${user.email}</span>.
-		`;
-		emailBtn.innerHTML = `<i class="fas fa-check"></i> Linked <i class="fas fa-check"></i>`;
-		emailBtn.style.opacity = '0.7';
-		phoneBtn.innerText = 'Link Phone';
-		phoneBtn.disabled = false;
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -100,13 +88,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/mail.png">
 		`;
-		protip.innerHTML = `
-			Banklogs will be sent to your email inbox <span>${user.email}</span>.
-		`;
-		emailBtn.innerHTML = `<i class="fas fa-check"></i> Linked <i class="fas fa-check"></i>`;
-		emailBtn.style.opacity = '0.7';
-		phoneBtn.innerText = 'Link Phone';
-		phoneBtn.disabled = false;
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -119,13 +101,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
-		protip.innerHTML = `
-			A dynamic link with banklogs info will be sent to <span>${user.phoneNumber}</span>
-		`;
-		emailBtn.innerText = 'Link Email';
-		emailBtn.disabled = false;
-		phoneBtn.innerHTML = `<i class="fas fa-check"></i> Linked <i class="fas fa-check"></i>`;
-		phoneBtn.style.opacity = '0.7';
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -138,13 +114,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
-		protip.innerHTML = `
-			A dynamic link with banklogs info will be sent to <span>${user.phoneNumber}</span>
-		`;
-		emailBtn.innerText = 'Link Email';
-		emailBtn.disabled = false;
-		phoneBtn.innerHTML = `<i class="fas fa-check"></i> Linked <i class="fas fa-check"></i>`;
-		phoneBtn.style.opacity = '0.7';
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
@@ -154,14 +124,8 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		protip.innerHTML = `
-			Link an <span>email / phone number</span> 
-			to get banklogs sent via <span>mail / sms</span>.
-		`;
-		emailBtn.innerText = 'Link Email';
-		emailBtn.disabled = false;
-		phoneBtn.innerText = 'Link Phone';
-		phoneBtn.disabled = false;
+		linkBtn.innerHTML = 'Link Email';
+		linkBtn.disabled = false;
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
@@ -171,14 +135,8 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		protip.innerHTML = `
-			Link an <span>email / phone number</span> 
-			to get banklogs sent via <span>mail / sms</span>.
-		`;
-		emailBtn.innerText = 'Link Email';
-		emailBtn.disabled = false;
-		phoneBtn.innerText = 'Link Phone';
-		phoneBtn.disabled = false;
+		linkBtn.innerHTML = 'Link Email';
+		linkBtn.disabled = false;
 	} 
 
 	if(user.uid){
@@ -187,11 +145,6 @@ auth.onAuthStateChanged(user => {
 	}
 
 });
-
-
-
-
-
 
 
 const sendVerificationEmail = () => {
@@ -259,53 +212,38 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 }
 
 fetch('https://ipapi.co/json/')
-	.then(function(response) {
-		return response.json();
-	})
-	.then(function(data) {
-		document.getElementById('label-ip').innerHTML = `
-			IP address: <span>${data.ip}</span> ${data.country_calling_code} <img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
-		`;
-		document.getElementById('the-ip').innerHTML = ` ${data.region},  ${data.org}, ${data.city}, ${data.country_name}`;
-		document.getElementById('modal-flag').src = `https://countryflagsapi.com/png/${data.country_code}`;
-		document.getElementById('phoneNumber').value = data.country_calling_code;
-		document.getElementById('vpn-tip').innerHTML = `<span>${data.ip}</span>, ${data.region}, ${data.city}, ${data.org}`;
-	});
-
-
-window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
-recaptchaVerifier.render().then(widgetId => {
-	window.recaptchaWidgetId = widgetId;
+.then(function(response) {
+	return response.json();
 })
-const sendVerificationCode = () => {
-	const phoneNumber = phoneNumberField.value;
-	const appVerifier = window.recaptchaVerifier;
-
-	auth.signInWithPhoneNumber(phoneNumber, appVerifier)
-		.then(confirmationResult => {
-			const sentCodeId = confirmationResult.verificationId;
-			signInWithPhoneButton.addEventListener('click', () => signInWithPhone(sentCodeId));
-		})
-}
-const signInWithPhone = sentCodeId => {
-	const code = codeField.value;
-	const credential = firebase.auth.PhoneAuthProvider.credential(sentCodeId, code);
-	auth.signInWithCredential(credential)
-		.then(() => {
-			window.location.reload();
-		})
-		.catch(error => {
-			alert(error.message);
-		})
-}
-getCodeButton.addEventListener('click', sendVerificationCode);
-
-$('#myform').on('submit', function(ev) {
-	$('#verifyModal').modal('show');
-	$('#numberModal').modal('hide');
-	ev.preventDefault();
+.then(function(data) {
+	document.getElementById('label-ip').innerHTML = `
+		IP address: <span>${data.ip}</span> ${data.country_calling_code} <img src="https://countryflagsapi.com/png/${data.country_code}" id="the-flag" />
+	`;
+	document.getElementById('the-ip').innerHTML = ` ${data.region},  ${data.org}, ${data.city}, ${data.country_name}`;
 });
 
+
+const signInWithGoogle = () => {
+	const googleProvider = new firebase.auth.GoogleAuthProvider;
+	auth.signInWithPopup(googleProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message)
+	});
+};
+signGoogle.addEventListener("click", signInWithGoogle);
+
+const signInWithYahoo = () => {
+	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
+	auth.signInWithPopup(yahooProvider).then(() => {
+		sendVerificationEmail();
+		window.location.reload();
+	}).catch(error => {
+		alert(error.message);
+	})
+}
+signYahoo.addEventListener("click", signInWithYahoo);
 
 jinaHolder.addEventListener("change", () => {
 	auth.currentUser.updateProfile({
@@ -519,24 +457,3 @@ function drawHand2(ctx, pos, length, width) {
 	ctx2.rotate(-pos);
 }
 
-
-const logOut = document.getElementById('sign-out');
-logOut.addEventListener('click', () => {
-    if(auth.currentUser.isAnonymous) {
-		auth.currentUser.delete()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	} else {
-		auth.signOut()
-			.then(() => {
-				window.location.assign('index');
-			})
-			.catch(error => {
-				console.error(error);
-			})
-	}
-})
