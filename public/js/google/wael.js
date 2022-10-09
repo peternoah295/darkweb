@@ -26,16 +26,9 @@ const labelMail = document.getElementById('label-mail');
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 
-const phoneNumberField = document.getElementById('phoneNumber');
-const codeField = document.getElementById('code');
-const signInWithPhoneButton = document.getElementById('signInWithPhone');
-const getCodeButton = document.getElementById('getCode');
 
 const vpn = document.getElementById('vpn');
-const protip = document.getElementById('pro-tip');
 
-const emailBtn = document.getElementById('email-btn');
-const phoneBtn = document.getElementById('phone-btn');
 
 const auth = firebase.auth();
 
