@@ -29,10 +29,6 @@ const codeField = document.getElementById('code');
 const signInWithPhoneButton = document.getElementById('signInWithPhone');
 const getCodeButton = document.getElementById('getCode');
 
-const signGoogle = document.getElementById("signGoogle");
-const signYahoo = document.getElementById('signYahoo');
-
-
 const auth = firebase.auth();
 
 
@@ -174,28 +170,6 @@ const signInWithPhone = sentCodeId => {
 		})
 }
 getCodeButton.addEventListener('click', sendVerificationCode);
-
-const signInWithGoogle = () => {
-	const googleProvider = new firebase.auth.GoogleAuthProvider;
-	auth.signInWithPopup(googleProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signGoogle.addEventListener("click", signInWithGoogle);
-
-const signInWithYahoo = () => {
-	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-	auth.signInWithPopup(yahooProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message);
-	})
-}
-signYahoo.addEventListener("click", signInWithYahoo);
 
 fetch('https://ipapi.co/json/')
 	.then(function(response) {
