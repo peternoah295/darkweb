@@ -342,7 +342,7 @@
                             or via sms as a dynamic link that expires after 7 hours, 
                             or you prefer to download the bank log and remain anonymous?
                         </p>
-                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#coModal">
                             Link Email Address
                             <img src="img/partners/emails.png">
                         </a>
@@ -395,6 +395,59 @@
 </a>
 
 
+<div class="modal fade"  id="coModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        LINK EMAIL
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body vpn-modal">
+                <p>
+                    Pro tip: Use a <span>proton mail</span> 
+                    account or a <span>burner email</span> 
+                    to login on darkweb.
+                </p>
+            </div>
+            <div class="modal-body">
+                <li class="thevpn">
+                    <img src="img/partners/emails.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Any Other
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle">
+                        Google Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo">
+                        Yahoo Mail
+                    </a>
+                </li>
+            </div>
+
+        </div>
+    </div>   
+</div>
+
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -405,7 +458,7 @@
                         LINK EMAIL
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#coModal"></button>
             </div>
             <div class="modal-body">
                 <p class="modal-p" id="modal-ps">
@@ -555,7 +608,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="js/main/core.confirm.js"></script>
-    <script src="js/google/authlink.js"></script>
+    <script src="js/google/fireconfirm.js"></script>
     <script src="js/main/confirm.js"></script>
 
     <script src="js/pages/table-data.js"></script>
