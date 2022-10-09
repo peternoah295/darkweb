@@ -42,14 +42,7 @@ const theDate2 = document.getElementById('the-date2');
 
 const labelMail = document.getElementById('label-mail');
 
-const mailField = document.getElementById('exampleInputEmail');
-const signUp = document.getElementById('signUp');
-
-const signGoogle = document.getElementById("signGoogle");
-const signYahoo = document.getElementById('signYahoo');
-
 const vpn = document.getElementById('vpn');
-const linkBtn = document.getElementById('settings');
 
 const auth = firebase.auth();
 
@@ -104,7 +97,6 @@ auth.onAuthStateChanged(user => {
 				<img src="img/partners/google.png">
 			`;
 		}
-		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -135,7 +127,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/mail.png">
 		`;
-		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} if (user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
@@ -164,7 +155,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
-		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	}  if (user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder3.value = user.phoneNumber;
@@ -193,7 +183,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
-		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	}  else if (user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
@@ -218,8 +207,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		linkBtn.innerHTML = 'Link Email';
-		linkBtn.disabled = false;
 	} else 	if (user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
@@ -244,8 +231,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		linkBtn.innerHTML = 'Link Email';
-		linkBtn.disabled = false;
 	} 
 
 	if(user.uid){
@@ -268,70 +253,6 @@ auth.onAuthStateChanged(user => {
 	}
 });
 
-const sendVerificationEmail = () => {
-	auth.currentUser.sendEmailVerification()
-}
-
-const signUpFunction = () => {
-	event.preventDefault();
-	const email = mailField.value;
-	var actionCodeSettings = {
-		url: 'https://www.darkweb.cx/home',
-		handleCodeInApp: true,
-	};
-	if(email.includes('@gmail.com')) {
-		const googleProvider = new firebase.auth.GoogleAuthProvider;
-		auth.signInWithPopup(googleProvider).then(() => {
-			sendVerificationEmail();
-			window.location.reload();
-		}).catch(error => {
-			alert(error.message)
-		});
-	} else if(email.includes('@yahoo.com')) {
-		const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-		auth.signInWithPopup(yahooProvider).then(() => {
-			sendVerificationEmail();
-			window.location.reload();
-		}).catch(error => {
-			alert(error.message);
-		})
-	} else {
-		auth.sendSignInLinkToEmail(email, actionCodeSettings)
-		.then(() => {
-			alert('Verification link sent to your email ' + email + " check the spam / junk folder");
-			window.localStorage.setItem('emailForSignIn', email);
-		})
-		.catch(error => {
-			alert(error.message);
-		});
-	}
-}
-signUp.addEventListener('click', signUpFunction);
-document.getElementById('the-form').addEventListener('submit', signUpFunction);
-
-
-if (auth.isSignInWithEmailLink(window.location.href)) {
-	var email = window.localStorage.getItem('emailForSignIn');
-	if (!email) {
-		localStorage.setItem('the-email', true)
-		email = window.prompt('Enter your email for confirmation');
-	}
-	auth.signInWithEmailLink(email, window.location.href)
-		.then((result) => {
-			if (localStorage.getItem('the-email')) {
-				sendVerificationEmail();
-				window.location.reload();
-			} else {
-				alert('Return to previous tab, email has been confirmed');
-				sendVerificationEmail();
-				window.close();
-			}
-		})
-		.catch((error) => {
-			console.log('Wrong email entered')
-		});
-}
-
 fetch('https://ipapi.co/json/')
 .then(function(response) {
 	return response.json();
@@ -342,30 +263,6 @@ fetch('https://ipapi.co/json/')
 	`;
 	document.getElementById('the-ip').innerHTML = ` ${data.region},  ${data.org}, ${data.city}, ${data.country_name}`;
 });
-
-
-const signInWithGoogle = () => {
-	const googleProvider = new firebase.auth.GoogleAuthProvider;
-	auth.signInWithPopup(googleProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signGoogle.addEventListener("click", signInWithGoogle);
-
-const signInWithYahoo = () => {
-	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-	auth.signInWithPopup(yahooProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message);
-	})
-}
-signYahoo.addEventListener("click", signInWithYahoo);
-
 
 jinaHolder.addEventListener("change", () => {
 	auth.currentUser.updateProfile({
