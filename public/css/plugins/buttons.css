@@ -1823,7 +1823,15 @@ td {
 #verifyModal .modal-dialog,
 	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
 		top: 17vh !important;
-		max-width: 87vw !important;
+		max-width: 83vw !important;
+	}
+}
+@media screen and (max-width: 411px) {
+	#numberModal .modal-dialog,
+#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+		top: 17vh !important;
+		max-width: 85vw !important;
 	}
 }
 
