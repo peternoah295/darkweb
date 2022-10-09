@@ -1,8 +1,8 @@
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
-const signGithub = document.getElementById('signGithub');
+
+
 const signGoogle = document.getElementById("signGoogle");
-const signYahoo = document.getElementById('signYahoo');
 const signGoogle2 = document.getElementById("signGoogle2");
 const signYahoo2 = document.getElementById('signYahoo2');
 
@@ -107,17 +107,6 @@ const signInAnony = () => {
 };
 signAnony.addEventListener("click", signInAnony);
 
-const signInWithGithub = () => {
-	const githubProvider = new firebase.auth.GithubAuthProvider;
-	auth.signInWithPopup(githubProvider).then(() => {
-		sendVerificationEmail();
-		window.location.assign('dashboard');
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signGithub.addEventListener("click", signInWithGithub);
-
 
 const signInWithGoogle = () => {
 	const googleProvider = new firebase.auth.GoogleAuthProvider;
@@ -140,7 +129,6 @@ const signInWithYahoo = () => {
 		alert(error.message);
 	})
 }
-signYahoo.addEventListener("click", signInWithYahoo);
 signYahoo2.addEventListener("click", signInWithYahoo);
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
