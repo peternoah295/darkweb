@@ -26,9 +26,8 @@ const labelMail = document.getElementById('label-mail');
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 
-
 const vpn = document.getElementById('vpn');
-
+const linkBtn = document.getElementById('settings');
 
 const auth = firebase.auth();
 
@@ -64,6 +63,7 @@ auth.onAuthStateChanged(user => {
 				<img src="img/partners/google.png">
 			`;
 		}
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if (!user.displayName && user.email) {
 		var themail = user.email;
 		var theaddress = themail.substring(0, themail.indexOf('@'));
@@ -79,6 +79,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/mail.png">
 		`;
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if(user.phoneNumber && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -91,6 +92,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	}  else if(user.phoneNumber && !user.displayName) {
 		jinaHolder.value = user.phoneNumber;
 		jinaHolder2.innerText = 'User ID: ' + user.uid;
@@ -103,6 +105,7 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/pho.jpg">
 		`;
+		linkBtn.innerHTML = 'Linked <i class="fas fa-check"></i>';
 	} else if(user.isAnonymous && user.displayName) {
 		jinaHolder.value = user.displayName;
 		jinaHolder3.value = user.displayName;
@@ -112,6 +115,8 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
+		linkBtn.innerHTML = 'Link Email';
+		linkBtn.disabled = false;
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
@@ -121,6 +126,8 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
+		linkBtn.innerHTML = 'Link Email';
+		linkBtn.disabled = false;
 	} 
 
 	if(user.uid){
