@@ -544,11 +544,11 @@
   }
 
 #style-switcher{
-    top: 42%;
+    top: 56%;
 }
 @media (max-width:592px){
     #style-switcher{
-        top: 42%;
+        top: 70%;
     }
 }
 
@@ -560,8 +560,8 @@
 }
 @media screen and (min-width: 1029px) {
     .banner-col {
-        margin-top: 50px !important;
-        margin-bottom: 60px !important;
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
     }
 }
 @media screen and (max-width: 591px){
