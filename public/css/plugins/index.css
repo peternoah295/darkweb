@@ -162,27 +162,27 @@
       margin: 35px 15px !important;
     }
     .port a img {
-      height: 200px;
+      height: 250px;
     }
     .port h4 a {
-      font-size: 29px;
+      font-size: 37px;
     }
     .port h4 a.boa {
-      font-size: 27px;
+      font-size: 35px;
     }
   }
   @media screen and (max-width: 769px) {
     .port {
-      margin: 30px 15px !important;
+      margin: 20px 15px !important;
     }
     .port a img {
-      height: 170px;
+      height: 230px;
     }
     .port h4 a {
-      font-size: 27px;
+      font-size: 35px;
     }
     .port h4 a.boa {
-      font-size: 25.5px;
+      font-size: 33px;
     }
   }
   @media screen and (max-width: 506px) {
@@ -506,7 +506,7 @@
   }
   
   
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 1067px) {
     .lg-display-none{
      display: none !important
    }
@@ -520,6 +520,14 @@
         margin: 5% auto !important;
     }
   }
+  @media (min-width: 767px) {
+  .col-md-65 {
+		-ms-flex: 0 0 40%;
+		flex: 0 0 40%;
+		max-width: 40%;
+    margin: 3% auto !important;
+   }
+  }
 
 #style-switcher{
     top: 42%;
@@ -532,8 +540,8 @@
 
 @media screen and (min-width: 729px) {
     .banner-col {
-        margin-top: 130px !important;
-        margin-bottom: 120px !important;
+        margin-top: 30px !important;
+        margin-bottom: 20px !important;
     }
 }
 @media screen and (min-width: 1029px) {
