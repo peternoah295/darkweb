@@ -54,6 +54,7 @@ if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklo
     updateCartTotal();
 } else {
     document.getElementById('cartlength').style.display = 'none';
+    document.getElementById('settings').innerHTML = 'Cart: $0';
 }
 
 if(localStorage.getItem('banklogs') && ((JSON.parse(localStorage.getItem('banklogs')).length) > 3)){
@@ -115,6 +116,7 @@ function updateCartTotal() {
         <img src="img/partners/check.png"> 
     `;
     document.getElementById('thetot').innerHTML = `View Cart: $${total.toLocaleString()}`;
+    document.getElementById('settings').innerHTML = `Cart: $${total.toLocaleString()}`;
     document.getElementById('theno1').innerHTML = 'Cart: ' + JSON.parse(localStorage.getItem('banklogs')).length + ' , Total: $' + total.toLocaleString();
 
     localStorage.setItem('time-left',900);
