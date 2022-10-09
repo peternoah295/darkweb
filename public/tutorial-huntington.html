@@ -1023,52 +1023,62 @@
     </div>   
 </div>
 
-<div class="modal fade"  id="acModal" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade"  id="coModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="section-heading">
-                    <h4 class="set">
-                        <img src="img/partners/settings.png">
-                        SETTINGS
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        LINK EMAIL
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze"  data-bs-toggle="modal" data-bs-target="#vpnModal"></button>
+                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#vpnModal"></button>
             </div>
             <div class="modal-body vpn-modal">
-                <p id="pro-tip">
-                    
+                <p>
+                    Pro tip: Use a <span>proton mail</span> 
+                    account or a <span>burner email</span> 
+                    to login on darkweb.
                 </p>
             </div>
             <div class="modal-body">
                 <li class="thevpn">
-                    <img src="img/partners/globe.png">
-                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#phoneModal">
-                        Best VPNs
+                    <img src="img/partners/emails.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Any Other
                     </a>
                 </li>
                 <hr class="thehr">
                 <li class="thevpn">
-                    <img src="img/partners/mail.png">
-                    <button class="butn vbtn" disabled id="email-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        
-                    </button>
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle">
+                        Google Mail
+                    </a>
                 </li>
                 <hr class="thehr">
                 <li class="thevpn">
-                    <img src="img/partners/phone.png">
-                    <button class="butn vbtn" disabled id="phone-btn" data-bs-toggle="modal" data-bs-target="#numberModal">
-                        
-                    </button>
+                    <img src="img/partners/outlook.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Outlook Mail
+                    </a>
                 </li>
                 <hr class="thehr">
                 <li class="thevpn">
-                    <img src="img/partners/logout.png">
-                    <a class="butn vbtn" id="sign-out">
-                        Sign Out
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo">
+                        Yahoo Mail
                     </a>
                 </li>
             </div>
+
         </div>
     </div>   
 </div>
@@ -1083,7 +1093,7 @@
                         LINK EMAIL
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#acModal"></button>
+                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#coModal"></button>
             </div>
             <div class="modal-body">
                 <p class="modal-p" id="modal-ps">
@@ -1104,128 +1114,6 @@
                         </button>
                     </li>
                 </form>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-<div class="modal fade"  id="numberModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 class="set">
-                        <img src="img/partners/phone.png">
-                        LINK PHONE
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#acModal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-p">
-                    A verification code will be sent to the number you input below 👇🏼 👇🏼.
-                    <br>
-                    Use the code to sign in on darkweb.
-                </p>
-                <hr class="thehr">
-                <form id="myform">
-                    <div class="form-group col-md-12">
-                        <div id="the-div">
-                            <img id="modal-flag" />
-                            <input type="tel" id="phoneNumber" class="form-control" placeholder="Enter Phone Number..." name="phone" pattern="[+]{1}[0-9]{11,14}" required />
-                        </div>
-                        <div id="recaptcha-container"></div>
-                    </div>
-                    <hr class="thehr">
-                    <li class="next" id="next-btn">
-                        <button type="submit" class="butn home-btn" id="getCode">
-                            Verify Number
-                            <img src="img/partners/check.png">
-                        </button>
-                    </li>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-<div class="modal fade" id="verifyModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4>
-                        <img src="img/partners/phone.png">
-                        VERIFY
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#numberModal"></button>
-            </div>
-            <div class="modal-body">
-                <p class="modal-p">
-                    Check your phone messages, and enter the code received.
-                </p>
-                <div class="form-group col-md-12">
-                    <input type="text" required maxlength="7" class="form-control" id="code" placeholder="Enter Verification Code...">
-                </div>
-                <li class="next" id="next-btn">
-                    <button type="submit" class="butn home-btn" id="signInWithPhone">
-                        Verify Code
-                        <img src="img/partners/check.png">
-                    </button>
-                </li>
-            </div>
-        </div>
-    </div>   
-</div>
-
-
-<div class="modal fade"  id="phoneModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 class="link-email">
-                        HIDE YOUR IP
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#acModal"></button>
-            </div>
-            <div class="modal-body vpn-modal">
-                <p id="vpn-tip">
-
-                </p>
-            </div>
-            <div class="modal-body">
-                <li class="thevpn">
-                    <img src="img/partners/cyber.png">
-                    <a class="butn vbtn" href="https://www.cyberghostvpn.com/en_US/" target="_blank">
-                        Cyber Ghost
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/nord.png">
-                    <a class="butn vbtn" href="https://nordvpn.com/safe-vpn-site/" target="_blank">
-                        Nord VPN
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/proton.png">
-                    <a class="butn vbtn" href="https://protonvpn.com/" target="_blank">
-                        Proton VPN
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/surfshark.png">
-                    <a class="butn vbtn" href="https://surfshark.com" target="_blank">
-                        SurfShark
-                    </a>
-                </li>
             </div>
         </div>
     </div>   
