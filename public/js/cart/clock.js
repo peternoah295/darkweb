@@ -51,7 +51,7 @@ function move(){
                 }
             } else if(!localStorage.getItem('loadtime')) {
                 var elemj = document.getElementById('pablos');
-                localStorage.setItem('time-left',900)
+                localStorage.setItem('time-left',900);
                 var width = localStorage.getItem('time-left');
                 var id = setInterval(frame, 1000);
                 function frame(){
@@ -96,7 +96,7 @@ function move(){
                         document.getElementById('escoz').innerHTML = `Time left: ${minutes}:${seconds}`;
                     }
                 }
-                localStorage.setItem('loadedtime', true)
+                localStorage.setItem('loadtime', true)
             }
         } else {
             console.log('No items are in cart');
