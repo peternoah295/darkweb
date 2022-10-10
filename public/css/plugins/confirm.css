@@ -67,12 +67,12 @@
     display: none;
 }
 #anon-invoice {
-    margin-top: 13vh !important;
+    margin-top: 23vh !important;
     padding: 13px 3px;
 }
 @media screen and (max-width: 821px) {
     #anon-invoice {
-        margin-top: 17vh !important;
+        margin-top: 23vh !important;
     }
 }
 #email-invoice p, #phone-invoice p, #anon-invoice p {

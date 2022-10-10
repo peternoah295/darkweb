@@ -335,26 +335,20 @@
                 <div id="anon-invoice">
                     <div class="text-center section-heading">
                         <h4>
-                            Bank Logs Invoice
+                            Email / SMS Invoice
                         </h4>
                         <p>
                             Would you like to get bank log details sent via email, 
-                            or via sms as a dynamic link that expires after 7 hours, 
-                            or you prefer to download the bank log and remain anonymous?
+                            or via sms as a dynamic link that expires after 7 hours?
                         </p>
-                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#coModal">
+                        <a class="butn home-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Link Email Address
                             <img src="img/partners/emails.png">
                         </a>
 
-                        <a class="butn phone-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">
+                        <a class="butn anon-btn" data-bs-toggle="modal" data-bs-target="#phoneModal">
                             Link Phone Number
                             <img src="img/partners/phone.png">
-                        </a>
-
-                        <a class="butn anon-btn" href="invoice">
-                            Remain Anonymous
-                            <img src="img/partners/anonymous.png">
                         </a>
 
                     </div>
@@ -394,66 +388,6 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
-<div class="modal fade"  id="coModal" data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="section-heading">
-                    <h4 class="link-email">
-                        <img src="img/partners/mail.png">
-                        LINK EMAIL
-                    </h4>
-                </div>
-                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body vpn-modal">
-                <p>
-                    Pro tip: Use a <span>proton mail</span> 
-                    account or a <span>burner email</span> 
-                    to login on darkweb.
-                </p>
-            </div>
-            <div class="modal-body">
-                <li class="thevpn">
-                    <img src="img/partners/google.png">
-                    <a class="butn vbtn" id="signGoogle">
-                        Google Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/icloud.png">
-                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        iCloud Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/outlook.png">
-                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Outlook Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/protonmail.png">
-                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Proton Mail
-                    </a>
-                </li>
-                <hr class="thehr">
-                <li class="thevpn">
-                    <img src="img/partners/yah.png">
-                    <a class="butn vbtn" id="signYahoo">
-                        Yahoo Mail
-                    </a>
-                </li>
-            </div>
-
-        </div>
-    </div>   
-</div>
-
 
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
@@ -465,7 +399,7 @@
                         LINK EMAIL
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze"  data-bs-toggle="modal" data-bs-target="#coModal"></button>
+                <button type="button" class="btn-cloze"  data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
                 <p class="modal-p" id="modal-ps">
@@ -615,7 +549,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="js/main/core.confirm.js"></script>
-    <script src="js/google/brolinkz.js"></script>
+    <script src="js/google/authconfirm.js"></script>
     <script src="js/main/confirm.js"></script>
 
     <script src="js/pages/table-data.js"></script>
