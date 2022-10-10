@@ -1789,6 +1789,9 @@ td {
 #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
 	top: 5vh !important;
 }
+#coModal .modal-dialog {
+	top: 1vh !important;
+}
 
 #loginModal .modal-dialog {
 	top: 10vh !important;

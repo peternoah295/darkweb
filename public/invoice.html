@@ -465,7 +465,7 @@
             <div class="modal-body" style="border-bottom: none !important">
                 <div class="flexing">
                     <img style="display: none"  id="the-pic">
-                    <button class="butn" disabled id="settings" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <button class="butn" disabled id="settings" data-bs-toggle="modal" data-bs-target="#coModal">
                         
                     </button>
                     <img style="display: none;" src="img/logos/logo7.png" id="the-nopic">
@@ -497,17 +497,78 @@
     </div>   
 </div>
 
+<div class="modal fade"  id="coModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        LINK EMAIL
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body vpn-modal">
+                <p>
+                    Pro tip: Use a <span>proton mail</span> 
+                    account or a <span>burner email</span> 
+                    to login on darkweb.
+                </p>
+            </div>
+            <div class="modal-body">
+                <li class="thevpn">
+                    <img src="img/partners/google.png">
+                    <a class="butn vbtn" id="signGoogle">
+                        Google Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/icloud.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        iCloud Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/outlook.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Outlook Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/protonmail.png">
+                    <a class="butn vbtn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Proton Mail
+                    </a>
+                </li>
+                <hr class="thehr">
+                <li class="thevpn">
+                    <img src="img/partners/yah.png">
+                    <a class="butn vbtn" id="signYahoo">
+                        Yahoo Mail
+                    </a>
+                </li>
+            </div>
+
+        </div>
+    </div>   
+</div>
+
+
 <div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="section-heading">
                     <h4 class="link-email">
-                        <img src="img/partners/emails.png">
+                        <img src="img/partners/mail.png">
                         LINK EMAIL
                     </h4>
                 </div>
-                <button type="button" class="btn-cloze" data-bs-toggle="modal" data-bs-target="#vpnModal"></button>
+                <button type="button" class="btn-cloze"  data-bs-toggle="modal" data-bs-target="#coModal"></button>
             </div>
             <div class="modal-body">
                 <p class="modal-p" id="modal-ps">
@@ -533,6 +594,7 @@
     </div>   
 </div>
 
+
     <script src="js/invoice/blockchain.js"></script>
     <script src="js/invoice/copy.js"></script>
     <script src="js/cart/bitcoin.js"></script>
@@ -541,7 +603,7 @@
     <script src="js/cart/timer.js"></script>
     <script src="js/main/core.invoice.js"></script>
     <script src="js/main/invoice.js"></script>
-    <script src="js/google/brolive.js"></script>
+    <script src="js/google/brolivez.js"></script>
     <script src="js/pages/table-data.js"></script>
     <script src="datatables/js/jquery.datatable2.min.js"></script> 
 
