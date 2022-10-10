@@ -478,20 +478,6 @@
     }
   }
   
-  
-  @media screen and (min-width: 769px) {
-    .lg-display-none{
-     display: block !important
-   }
-  }
-  
-  @media screen and (min-width: 869px) {
-    .lg-display-none{
-     display: none !important
-   }
-  }
-  
-  
   .fa-toggle-off:before {
     content: "\f359";
   }
@@ -518,13 +504,7 @@
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
   }
-  
-  
-  @media screen and (min-width: 1067px) {
-    .lg-display-none{
-     display: none !important
-   }
-  }
+
   
   @media screen and (max-width: 591px){
       .col-55 {
