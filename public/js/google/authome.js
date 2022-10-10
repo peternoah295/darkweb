@@ -40,7 +40,7 @@ const thePic2 = document.getElementById('the-pic2');
 const thenoPic2 = document.getElementById('the-nopic2');
 const theDate2 = document.getElementById('the-date2');
 
-const labelMail = document.getElementById('label-mail');
+const labelMail = document.getElementById('label-mail2');
 
 const vpn = document.getElementById('vpn');
 
