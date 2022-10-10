@@ -25,12 +25,6 @@ const theDate = document.getElementById('the-date');
 
 const labelMail = document.getElementById('label-mail');
 
-const anonInvoice = document.getElementById('anon-invoice');
-const logSection = document.getElementById('logsection');
-const logsection2 = document.getElementById('logsection2');
-const emptyCart = document.getElementById('predat');
-
-
 const vpn = document.getElementById('vpn');
 
 
@@ -119,10 +113,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		logSection.style.display = 'none';
-		logsection2.style.display = 'none';
-		emptyCart.style.display = 'none';
-		anonInvoice.style.display = 'flex';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
@@ -132,10 +122,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		logSection.style.display = 'none';
-		logsection2.style.display = 'none';
-		emptyCart.style.display = 'none';
-		anonInvoice.style.display = 'flex';
 	} 
 
 	if(user.uid){
