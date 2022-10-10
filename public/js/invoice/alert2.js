@@ -14,7 +14,7 @@ auth.onAuthStateChanged(user => {
 			var msgs = [`
 				${user.displayName}, ${toastbitcoin} Bitcoin payment not detected
 				<hr>
-				Scan the bitcoin address and send $100 to complete the download
+				Scan the bitcoin address and send $70 to complete the download
 				<hr>
 				Cost of getting bank logs is currently high, sorry for any inconvinience caused.
 				<hr>
@@ -29,7 +29,7 @@ auth.onAuthStateChanged(user => {
 			var msgs = [`
 				${toastbitcoin} Bitcoin payment not detected
 				<hr>
-				Scan the bitcoin address and send $100 to complete the download
+				Scan the bitcoin address and send $70 to complete the download
 				<hr>
 				Cost of getting bank logs is currently high, sorry for any inconvinience caused.
 				<hr>
@@ -44,7 +44,7 @@ auth.onAuthStateChanged(user => {
 			var msgs = [`
 				${toastbitcoin} Bitcoin payment not detected
 				<hr>
-				Scan the bitcoin address and send $100 to complete the download
+				Scan the bitcoin address and send $70 to complete the download
 				<hr>
 				Cost of getting bank logs is currently high, sorry for any inconvinience caused.
 				<hr>
@@ -59,7 +59,7 @@ auth.onAuthStateChanged(user => {
 			var msgs = [`
 				${toastbitcoin} Bitcoin payment not detected
 				<hr>
-				Scan the bitcoin address and send $100 to complete the download
+				Scan the bitcoin address and send $70 to complete the download
 				<hr>
 				Cost of getting bank logs is currently high, sorry for any inconvinience caused.
 				<hr>
