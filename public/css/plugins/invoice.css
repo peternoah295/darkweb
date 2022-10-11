@@ -27,18 +27,16 @@
         margin-top: 78px;
     }
 }
-#anon-invoice,
 #predat {
     display: none;
     padding: 3px;
     height: 100vh;
     margin: 0 -7px !important;
 }
-#anon-invoice div,
+
 #predat div {
     overflow-y: hidden !important;
 }
-#anon-invoice .section-heading h4,
 #predat .section-heading h4 {
     color: #121d33;
 }

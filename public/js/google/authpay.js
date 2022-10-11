@@ -24,14 +24,7 @@ const thenoPic = document.getElementById('the-nopic');
 const theDate = document.getElementById('the-date');
 
 const labelMail = document.getElementById('label-mail');
-const linkBtn = document.getElementById('settings');
-
 const vpn = document.getElementById('vpn');
-
-const logSection = document.getElementById('logsection');
-const logSection2 = document.getElementById('logsection2');
-const emptyCart = document.getElementById('predat');
-const anonInvoice = document.getElementById('anon-invoice');
 
 if(!window.location.href.includes('arkweb')){
 	if(!window.location.href.includes('5501')) {
@@ -118,10 +111,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		logSection.style.display = 'none';
-		logSection2.style.display = 'none';
-		emptyCart.style.display = 'none';
-		anonInvoice.style.display = 'flex';
 	} else if(user.isAnonymous && !user.displayName) {
 		jinaHolder.value = 'Anonymous';
 		jinaHolder3.value = 'Anonymous';
@@ -131,10 +120,6 @@ auth.onAuthStateChanged(user => {
 			View Profile
 			<img src="img/partners/anonymous.png">
 		`;
-		logSection.style.display = 'none';
-		logSection2.style.display = 'none';
-		emptyCart.style.display = 'none';
-		anonInvoice.style.display = 'flex';
 	} 
 
 	if(user.uid){
