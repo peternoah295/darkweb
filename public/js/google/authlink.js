@@ -24,10 +24,6 @@ const anonInvoice = document.getElementById('anon-invoice');
 const mailField = document.getElementById('exampleInputEmail');
 const signUp = document.getElementById('signUp');
 
-const signGoogle = document.getElementById("signGoogle");
-const signYahoo = document.getElementById('signYahoo');
-
-
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
 const signInWithPhoneButton = document.getElementById('signInWithPhone');
@@ -147,28 +143,6 @@ if (auth.isSignInWithEmailLink(window.location.href)) {
 			console.log('Wrong email entered')
 		});
 }
-
-const signInWithGoogle = () => {
-	const googleProvider = new firebase.auth.GoogleAuthProvider;
-	auth.signInWithPopup(googleProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message)
-	});
-};
-signGoogle.addEventListener("click", signInWithGoogle);
-
-const signInWithYahoo = () => {
-	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-	auth.signInWithPopup(yahooProvider).then(() => {
-		sendVerificationEmail();
-		window.location.reload();
-	}).catch(error => {
-		alert(error.message);
-	})
-}
-signYahoo.addEventListener("click", signInWithYahoo);
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 recaptchaVerifier.render().then(widgetId => {
