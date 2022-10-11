@@ -426,33 +426,6 @@
 </section>
 
 
-<!-- start projet ection -->
-<section class="bg-img bg-animate" data-background="img/content/home12.jpg" id="anon-invoice">
-    <div class="opacity-full-dark bg-extra-dark-gray">
-        <div id="particles-xs"></div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-
-            <div class="col-lg-6 col-md-8 col-12 center-col">
-                <div class="empty-cart">
-                    <div class="text-center section-heading">
-                        <h4>
-                            You're Anonymous
-                        </h4>
-                        <a class="butn home-btn" href="confirm">
-                            Link Email
-                            <img src="img/partners/emails.png">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
 </div>
 <!-- end page main wrapper -->
 
@@ -491,7 +464,7 @@
             <div class="modal-body" style="border-bottom: none !important">
                 <div class="flexing">
                     <img style="display: none"  id="the-pic">
-                    <button class="butn" id="settings" data-bs-dismiss="modal">
+                    <button class="butn" disabled id="settings" data-bs-toggle="modal" data-bs-target="#loginModal">
                         
                     </button>
                     <img style="display: none;" src="img/logos/logo7.png" id="the-nopic">
@@ -523,19 +496,56 @@
     </div>   
 </div>
 
+
+<div class="modal fade"  id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="section-heading">
+                    <h4 class="link-email">
+                        <img src="img/partners/mail.png">
+                        LINK EMAIL
+                    </h4>
+                </div>
+                <button type="button" class="btn-cloze" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-p" id="modal-ps">
+                    A link will be sent to the email you enter below 👇🏼👇🏼.
+                    <br>
+                    Use the link to sign in on darkweb.
+                </p>
+                <hr class="thehr">
+                <form id="the-form">
+                    <div class="form-group col-md-12">
+                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter Your Email..." required>
+                    </div>
+                    <hr class="thehr">
+                    <li class="next">
+                        <button type="submit" class="butn home-btn" id="signUp">
+                            Verify Email
+                            <img src="img/partners/check.png">
+                        </button>
+                    </li>
+                </form>
+            </div>
+        </div>
+    </div>   
+</div>
+
     <script src="js/invoice/blockchain.js"></script>
     <script src="js/invoice/copy.js"></script>
     <script src="js/cart/bitcoin.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-    <script src="js/cart/clockz.js"></script>
+    <script src="js/cart/clocks.js"></script>
     <script src="js/main/core.invoice.js"></script>
     <script src="js/main/invoice.js"></script>
-    <script src="js/google/bromoney.js"></script>
+    <script src="js/google/invoice.js"></script>
     <script src="js/pages/table-data.js"></script>
     <script src="datatables/js/jquery.datatable2.min.js"></script> 
 
-    <script src="js/cart/invoice.js"></script>
+    <script src="js/cart/anvoice.js"></script>
     <script src="js/pages/particles.js"></script>
     <script src="js/pages/particles2.js"></script>
     <script src="js/pages/particless3.js"></script>

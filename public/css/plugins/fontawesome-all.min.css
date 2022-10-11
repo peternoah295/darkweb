@@ -115,6 +115,14 @@
 .fa-bitcoin:before{
 	content:"\f379"
 }
+.fa-phone:before {
+    content:"\f095"
+}
+
+.fa-envelope:before {
+    content:"\f0e0"
+}
+
 .sr-only{
 	border:0;
 	clip:rect(0,0,0,0);
