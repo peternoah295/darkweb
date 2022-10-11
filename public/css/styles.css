@@ -288,13 +288,9 @@ blink.high {
   transition: all 0.7s ease;
 }
 #loginModal .modal-content,
-#coModal .modal-content,
 #phoneModal .modal-content,
-#numberModal .modal-content,
 #verifyModal .modal-content,
-#acModal .modal-content,
 #vpnModal .modal-content,
-#logsModal .modal-content,
 #profileModal .modal-content,
 #exampleModal .modal-content {
   background: rgb(76, 109, 59, 0.5) !important;

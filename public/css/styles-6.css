@@ -261,13 +261,9 @@ blink.high {
   border: 1.4px solid rgba(208, 173, 85, 1);
 }
 #loginModal .modal-content,
-#coModal .modal-content,
 #phoneModal .modal-content,
-#numberModal .modal-content,
 #verifyModal .modal-content,
-#acModal .modal-content,
 #vpnModal .modal-content,
-#logsModal .modal-content,
 #profileModal .modal-content,
 #exampleModal .modal-content {
   background: rgb(113, 101, 68, 0.5) !important;
