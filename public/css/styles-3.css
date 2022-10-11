@@ -295,7 +295,6 @@ blink.high {
 .account {
   border: 1.4px solid rgba(0, 115, 173, 0.3);
 }
-#logsModal .modal-content,
 #profileModal .modal-content {
   border: 1.4px solid rgba(0, 115, 173, 0.7) !important;
   box-shadow: 0px 5px 10px 0px rgba(0, 115, 173, 0.3);
