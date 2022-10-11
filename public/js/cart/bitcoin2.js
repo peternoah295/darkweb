@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
         bitcoin.innerHTML = `
         <i class="fas fa-spin fa-sync-alt spinner-bordez"></i> awaiting 
         <span id="the-one">
-            ${( 100 / parseFloat(confirm.k.c)).toFixed(5)}
+            ${( 70 / parseFloat(confirm.k.c)).toFixed(5)}
         </span> bitcoin payment
         `;
     }
