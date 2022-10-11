@@ -146,7 +146,7 @@
 	}
 }
 .bro-text {
-	opacity: 0 !important;
+	opacity: 0.3 !important;
 }
 #list .bro-text {
 	opacity: 0.085 !important;
