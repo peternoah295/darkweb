@@ -2694,13 +2694,13 @@ ul.countdown li p {
 }
 
 .modal-body .thevpn {
-	width: 61% !important;
+	width: 73% !important;
 	margin: 14px auto !important;
 }
 
 @media screen and (max-width: 767px) {
 	.modal-body .thevpn {
-		width: 73% !important;
+		width: 77% !important;
 		margin: 14px auto !important;
 	}
 }
