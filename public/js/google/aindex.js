@@ -4,9 +4,6 @@ const signUp = document.getElementById('signUp');
 const signGoogle = document.getElementById("signGoogle");
 const signAnony = document.getElementById('signAnony');
 
-const signGoogle2 = document.getElementById("signGoogle2");
-const signYahoo2 = document.getElementById('signYahoo2');
-
 const phoneNumberField = document.getElementById('phoneNumber');
 const codeField = document.getElementById('code');
 const signInWithPhoneButton = document.getElementById('signInWithPhone');
@@ -116,18 +113,6 @@ const signInWithGoogle = () => {
 	});
 };
 signGoogle.addEventListener("click", signInWithGoogle);
-signGoogle2.addEventListener("click", signInWithGoogle);
-
-const signInWithYahoo = () => {
-	const yahooProvider = new firebase.auth.OAuthProvider('yahoo.com');
-	auth.signInWithPopup(yahooProvider).then(() => {
-		sendVerificationEmail();
-		window.location.assign('dashboard');
-	}).catch(error => {
-		alert(error.message);
-	})
-}
-signYahoo2.addEventListener("click", signInWithYahoo);
 
 
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
