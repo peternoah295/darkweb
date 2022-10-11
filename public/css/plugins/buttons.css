@@ -756,9 +756,7 @@ select {
 		max-width: 50vw;
 		margin: 1.75rem auto;
 	}
-
-	#logsModal .modal-dialog,
-  #profileModal .modal-dialog {
+  	#profileModal .modal-dialog {
 		max-width: 90vw;
 		margin: 1.75rem auto;
 	}
@@ -769,9 +767,7 @@ select {
 		max-width: 50vw;
 		margin: 1.75rem auto;
 	}
-
-	#logsModal .modal-dialog,
-  #profileModal .modal-dialog {
+  	#profileModal .modal-dialog {
 		max-width: 92vw;
 		margin: 1.75rem auto;
 	}
@@ -782,9 +778,7 @@ select {
 		max-width: 32vw;
 		margin: 1.75rem auto;
 	}
-
-	#logsModal .modal-dialog,
-  #profileModal .modal-dialog {
+  	#profileModal .modal-dialog {
 		min-width: 97vw;
 		margin: 1.75rem auto;
 	}
@@ -838,7 +832,7 @@ select {
 
 @media (max-width: 768px) {
 	#thelogs,
-  #thetot1 {
+  	#thetot1 {
 		font-weight: 700;
 		font-size: 28px;
 		margin: 16px !important;
@@ -849,7 +843,7 @@ select {
 
 @media (max-width: 375px) {
 	#thelogs,
-  #thetot1 {
+  	#thetot1 {
 		margin: 10px !important;
 		margin-right: 7px !important;
 	}
@@ -1143,9 +1137,7 @@ td {
 	#modalsend {
 		margin-top: 0;
 	}
-
-	#logsModal .modal-header,
-  #profileModal .modal-header {
+  	#profileModal .modal-header {
 		margin: 0 auto !important;
 		padding: 7px;
 		text-align: center;
@@ -1327,7 +1319,6 @@ td {
 }
 
 @media (max-width: 769px) {
-	#logsModal .modal-dialog,
   #profileModal .modal-dialog {
 		border: none !important;
 	}
@@ -1340,8 +1331,6 @@ td {
 #name-on-table0, #name-on-table1, #name-on-table2, #name-on-table3, #name-on-table4, #name-on-table5, #name-on-table6, #name-on-table7, #name-on-table8, #name-on-table9 {
 	text-transform: capitalize !important;
 }
-
-#logsModal .modal-body,
 #profileModal .modal-body {
 	margin: 0 !important;
 	padding: 0 !important;
@@ -1697,100 +1686,67 @@ td {
 	color: #fff !important;
 	font-size: 24px !important;
 }
-
-#logsModal,
 #profileModal {
 	overflow-y: hidden !important;
 	padding: 0 !important;
 	margin: 0 !important;
 }
-
-#logsModal .modal-dialog,
 #profileModal .modal-dialog {
 	top: -4vh !important;
 	overflow-y: hidden !important;
 	height: 100% !important
 }
 
-#logsModal .modal-dialog {
-	top: 10vh !important;
-}
-
-@media (max-width: 1092px) {
-	#logsModal .modal-dialog {
-		top: 15vh !important;
-	}
-}
-
-#logsModal .modal-dialog .modal-content,
 #profileModal .modal-dialog .modal-content {
 	max-height: 52% !important;
 }
-
-#logsModal .modal-dialog .modal-body,
 #profileModal .modal-dialog .modal-body {
 	overflow-y: auto !important
 }
-
-#logsModal .modal-dialog .modal-body::-webkit-scrollbar,
 #profileModal .modal-dialog .modal-body::-webkit-scrollbar {
 	width: 10px;
 }
 
 @media screen and (max-width: 821px) {
-	#logsModal .modal-dialog,
   #profileModal .modal-dialog {
 		top: 17vh !important;
 	}
-
-	#logsModal .modal-dialog .modal-content,
   #profileModal .modal-dialog .modal-content {
 		max-height: 35% !important;
 	}
 }
 
 @media screen and (max-width: 769px) {
-	#logsModal .modal-dialog,
   #profileModal .modal-dialog {
 		top: 15vh !important;
 	}
-
-	#logsModal .modal-dialog .modal-content,
   #profileModal .modal-dialog .modal-content {
 		max-height: 35% !important;
 	}
 }
 
 @media screen and (max-width: 570px) {
-	#logsModal .modal-dialog,
   #profileModal .modal-dialog {
 		top: 10vh !important;
 	}
-
-	#logsModal .modal-dialog .modal-content,
   #profileModal .modal-dialog .modal-content {
 		max-height: 45% !important;
 	}
 }
 
 @media screen and (max-width: 370px) {
-	#logsModal .modal-dialog,
-  #profileModal .modal-dialog {
+  	#profileModal .modal-dialog {
 		top: 8vh !important;
 	}
-
-	#logsModal .modal-dialog .modal-content,
-  #profileModal .modal-dialog .modal-content {
+  	#profileModal .modal-dialog .modal-content {
 		max-height: 45% !important;
 	}
 }
-#numberModal .modal-dialog,
 #verifyModal .modal-dialog,
-#phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+#phoneModal .modal-dialog, 
+#vpnModal .modal-dialog, 
+#exampleModal .modal-dialog {
 	top: 5vh !important;
-}
-#coModal .modal-dialog {
-	top: 7vh !important;
 }
 
 #loginModal .modal-dialog {
@@ -1798,49 +1754,58 @@ td {
 }
 
 @media screen and (max-width: 821px) {
-	#numberModal .modal-dialog,
-#verifyModal .modal-dialog,
-	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+	#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, 
+	#phoneModal .modal-dialog, 
+	#vpnModal .modal-dialog, 
+	#exampleModal .modal-dialog {
 		top: 17vh !important;
 	}
 }
 
 @media screen and (max-width: 769px) {
-	#numberModal .modal-dialog,
-#verifyModal .modal-dialog,
-	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+	#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, 
+	#phoneModal .modal-dialog, 
+	#vpnModal .modal-dialog, 
+	#exampleModal .modal-dialog {
 		top: 15vh !important;
 	}
 }
 
 @media screen and (max-width: 570px) {
-	#numberModal .modal-dialog,
-#verifyModal .modal-dialog,
-	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+	#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, 
+	#phoneModal .modal-dialog, 
+	#vpnModal .modal-dialog, 
+	#exampleModal .modal-dialog {
 		top: 17vh !important;
 		max-width: 81vw !important;
 	}
 }
 @media screen and (max-width: 420px) {
-	#numberModal .modal-dialog,
-#verifyModal .modal-dialog,
-	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+	#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, 
+	#phoneModal .modal-dialog, 
+	#vpnModal .modal-dialog, 
+	#exampleModal .modal-dialog {
 		top: 17vh !important;
 		max-width: 83vw !important;
 	}
 }
 @media screen and (max-width: 411px) {
-	#numberModal .modal-dialog,
-#verifyModal .modal-dialog,
-	#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog, #acModal .modal-dialog {
+	#verifyModal .modal-dialog,
+	#loginModal .modal-dialog, 
+	#phoneModal .modal-dialog, 
+	#vpnModal .modal-dialog, 
+	#exampleModal .modal-dialog {
 		top: 17vh !important;
 		max-width: 85vw !important;
 	}
 }
 
 @media screen and (max-width: 570px) {
-	#logsModal .modal-dialog,
-  #profileModal .modal-dialog {
+  	#profileModal .modal-dialog {
 		max-width: 98vw !important;
 	}
 }
@@ -1848,66 +1813,82 @@ td {
 .jina-div {
 	display: grid;
 }
-#numberModal .modal-dialog,
 #verifyModal .modal-dialog,
-#loginModal .modal-dialog, #phoneModal .modal-dialog, #coModal .modal-dialog, #vpnModal .modal-dialog, #exampleModal .modal-dialog,  #acModal .modal-dialog {
+#loginModal .modal-dialog, 
+#phoneModal .modal-dialog, 
+#vpnModal .modal-dialog, 
+#exampleModal .modal-dialog {
 	background: transparent !important;
 }
-#numberModal .modal-header,
 #verifyModal .modal-header,
-#loginModal .modal-header, #phoneModal .modal-header, #coModal .modal-header, #vpnModal .modal-header, #exampleModal .modal-header,  #acModal .modal-header {
+#loginModal .modal-header, 
+#phoneModal .modal-header, 
+#vpnModal .modal-header, 
+#exampleModal .modal-header {
 	margin: 2px;
 	padding: 0;
 	border-bottom: none;
 }
-#numberModal .modal-header img,
 #verifyModal .modal-header img,
-#loginModal .modal-header img, #phoneModal .modal-header img, #coModal .modal-header img, #vpnModal .modal-header img, #exampleModal .modal-header img,  #acModal .modal-header img {
+#loginModal .modal-header img, 
+#phoneModal .modal-header img, 
+#vpnModal .modal-header img, 
+#exampleModal .modal-header img {
 	width: 70px;
 }
-#numberModal .modal-header h4.modal-title,
 #verifyModal .modal-header h4.modal-title,
-#loginModal .modal-header h4.modal-title, #phoneModal .modal-header h4.modal-title, #coModal .modal-header h4.modal-title, #vpnModal .modal-header h4.modal-title, #exampleModal .modal-header h4.modal-title, #acModal .modal-header h4.modal-title {
+#loginModal .modal-header h4.modal-title, 
+#phoneModal .modal-header h4.modal-title, 
+#vpnModal .modal-header h4.modal-title, 
+#exampleModal .modal-header h4.modal-title {
 	font-weight: 600;
 }
-
-#logsModal .modal-header h4 {
-	font-size: 28px !important;
-}
-#numberModal .modal-header .close img,
 #verifyModal .modal-header .close img,
-#loginModal .modal-header .close img, #phoneModal .modal-header .close img, #coModal .modal-header .close img, #vpnModal .modal-header .close img, #exampleModal .modal-header .close img,  #acModal .modal-header .close img {
+#loginModal .modal-header .close img, 
+#phoneModal .modal-header .close img, 
+#vpnModal .modal-header .close img, 
+#exampleModal .modal-header .close img {
 	width: 30px;
 	opacity: 0.7;
 	border-radius: 50%;
 }
-#numberModal .modal-header .close img:hover,
 #verifyModal .modal-header .close img:hover,
-#loginModal .modal-header .close img:hover, #phoneModal .modal-header .close img:hover, #coModal .modal-header .close img:hover, #vpnModal .modal-header .close img:hover, #exampleModal .modal-header .close img:hover,  #acModal .modal-header .close img:hover {
+#loginModal .modal-header .close img:hover, 
+#phoneModal .modal-header .close img:hover, 
+#vpnModal .modal-header .close img:hover, 
+#exampleModal .modal-header .close img:hover {
 	opacity: 1 !important;
 }
-#numberModal .modal-footer,
 #verifyModal .modal-footer,
-#loginModal .modal-footer, #phoneModal .modal-footer, #coModal .modal-footer, #vpnModal .modal-footer, #exampleModal .modal-footer, #acModal .modal-footer {
+#loginModal .modal-footer, 
+#phoneModal .modal-footer, 
+#vpnModal .modal-footer, 
+#exampleModal .modal-footer {
 	margin: 4px;
 	border-top: none;
 	padding: 0;
 }
-#numberModal .modal-body,
 #verifyModal .modal-body,
-#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body, #vpnModal .modal-body, #exampleModal .modal-body, #acModal .modal-body {
+#loginModal .modal-body, 
+#phoneModal .modal-body, 
+#coModal .modal-body, 
+#vpnModal .modal-body, 
+#exampleModal .modal-body {
 	margin: 0;
 	padding: 0;
 	background: transparent !important;
 }
-#numberModal .modal-backdrop div p,
 #verifyModal .modal-backdrop div p,
-#loginModal .modal-backdrop div p, #phoneModal .modal-backdrop div p, #coModal .modal-backdrop div p, #vpnModal .modal-body div p, #exampleModal .modal-body div p,  #acModal .modal-body div p {
+#loginModal .modal-backdrop div p, 
+#phoneModal .modal-backdrop div p, 
+#vpnModal .modal-body div p, 
+#exampleModal .modal-body div p {
 	background: transparent !important;
 }
-#numberModal .modal-body,
+
 #verifyModal .modal-body,
-#loginModal .modal-body, #phoneModal .modal-body, #coModal .modal-body {
+#loginModal .modal-body, 
+#phoneModal .modal-body {
 	text-align: center !important;
 }
 
@@ -1939,7 +1920,6 @@ td {
 	text-align: center !important;
 }
 
-#logsModal .modal-dialog,
 #profileModal .modal-dialog {
 	background: transparent !important;
 }
@@ -1952,19 +1932,15 @@ td {
 	background: transparent !important;
 }
 
-#logsModal .modal-header,
 #profileModal .modal-header {
 	margin: 0 !important;
 }
-
-#logsModal .modal-header img,
 #profileModal .modal-header img {
 	width: 30px !important;
 	opacity: 0.7 !important;
 	border-radius: 50%;
 }
 
-#logsModal .modal-header img:hover,
 #profileModal .modal-header img:hover {
 	width: 30px !important;
 	opacity: 1 !important;
@@ -2909,7 +2885,6 @@ ul.countdown li p {
 .modal-dialog .butn.home-btn {
 	padding: 7.5px 15px !important;
 }
-#numberModal .butn.home-btn,
 #loginModal .butn.home-btn {
 	margin: 1vh 0 !important;
 }
@@ -3033,7 +3008,6 @@ ul.countdown li p {
     height: 57px !important;
     margin: auto 7px !important;
 }
-#numberModal 
 #phoneNumber {
     border-radius: 0 !important;
     font-size: 21px !important;
