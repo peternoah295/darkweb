@@ -14,7 +14,7 @@
     color: #121d33;
 }
 .butn.home-btn, .butn.phone-btn, .butn.anon-btn {
-    margin: 3vh 0 1vh;
+    margin: 3vh 0 2vh;
     color: #121d33 !important;
     font-size: 24px;
     cursor: pointer !important;
@@ -67,13 +67,8 @@
     display: none;
 }
 #anon-invoice {
-    margin-top: 13vh !important;
+    margin-top: 23vh !important;
     padding: 13px 3px;
-}
-@media screen and (max-width: 821px) {
-    #anon-invoice {
-        margin-top: 17vh !important;
-    }
 }
 #email-invoice p, #phone-invoice p, #anon-invoice p {
     margin: 7px auto !important;
