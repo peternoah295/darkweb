@@ -302,13 +302,9 @@ blink.high {
 }
 #loginModal .modal-header .close img,
 #phoneModal .modal-header .close img,
-#numberModal .modal-header .close img,
 #verifyModal .modal-header .close img,
-#coModal .modal-header .close img,
-#acModal .modal-header .close img,
-#vpnModal .modal-header img,
-#profileModal .modal-header img,
-#logsModal .modal-header .close img,
+#vpnModal .modal-header .close img,
+#profileModal .modal-header .close img,
 #exampleModal .modal-header .close img,
 .btn-remove {
   border: 1.4px solid rgba(250, 183, 2, 0.7);
